@@ -1,0 +1,19 @@
+.ProductCard {
+  padding: 1.2em;
+  box-shadow: 1px 1px 11px -4px #00000042;
+  border-radius: 5px;
+  flex: 0 0 calc(23%);
+  height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .ProductCard {
+    flex: 0 0 calc(47%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ProductCard {
+    flex: 1 0 100%;
+  }
+}
