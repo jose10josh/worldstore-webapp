@@ -1,13 +1,13 @@
-export interface ProductModel{
-  id: number,
-  title: string,
-  price: number,
-  description: string,
-  category: string,
-  image: string,
+export interface ProductModel {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
   rating: {
-    rate: number,
-    count: number
-  },
-  favorite:boolean
+    rate: number;
+    count: number;
+  };
+  favorite: boolean;
 }

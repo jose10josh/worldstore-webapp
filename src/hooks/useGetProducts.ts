@@ -1,25 +1,23 @@
-import { useEffect, useState } from "react";
-import { fetchProducts } from "../api/fetchProducts";
-import { ProductModel } from "../models/ProductModel";
+import { useEffect, useState } from 'react';
+import { fetchProducts } from '../api/fetchProducts';
+import { ProductModel } from '../models/ProductModel';
 
-
-export const useGetProducts = (url:string) => {
+export const useGetProducts = (url: string) => {
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error|null>(null);
-  const [prodList, setProdList] = useState<ProductModel[]>([])
+  const [error, setError] = useState<Error | null>(null);
+  const [prodList, setProdList] = useState<ProductModel[]>([]);
 
   useEffect(() => {
     fetchProducts(url)
-      .then(data=>{
-        setProdList(data)
+      .then((data) => {
+        setProdList(data);
         setLoading(false);
       })
-      .catch((error:Error) => {
-        setError(error);
+      .catch((err: Error) => {
+        setError(err);
         setLoading(false);
-        console.error(`Error fetching products: ${error.message}`);
+        console.error(`Error fetching products: ${err.message}`);
       });
-
-    }, [])
-  return {loading, error, prodList};
-}
+  }, []);
+  return { loading, error, prodList };
+};
