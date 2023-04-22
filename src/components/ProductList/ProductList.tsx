@@ -9,7 +9,7 @@ import { useGetProducts } from '../../hooks/useGetProducts';
 import './ProductList.css';
 import { useAppDispatch } from '../../app/hooks';
 
-function ProductList() {
+const ProductList = () => {
   const dispatch = useAppDispatch();
   const { loading, error, prodList } = useGetProducts(`${API}/products`);
 

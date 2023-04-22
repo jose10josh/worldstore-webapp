@@ -5,7 +5,7 @@ import { setSearched } from '../../slices/productSlice';
 
 import './SearchBar.css';
 
-function SearchBar() {
+const SearchBar = () => {
   const dispatch = useAppDispatch();
   const [search, setSearch] = useState<string>('');
   const searchInput = useRef<HTMLInputElement>(null);

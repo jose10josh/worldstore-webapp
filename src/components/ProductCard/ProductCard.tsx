@@ -8,7 +8,7 @@ type Props = {
   product: ProductModel;
 };
 
-function ProductCard({ product }: Props) {
+const ProductCard = ({ product }: Props) => {
   const dispatch = useAppDispatch();
 
   const handleSetFavorite = (item: ProductModel) => {

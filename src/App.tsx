@@ -8,9 +8,8 @@ import {
   // RouterProvider
 } from "react-router-dom";
 
-import { Header } from './components/Header/Header';
 import { Home } from './containers/home';
-import './App.css';
+import { Layout } from './components/Layout/Layout';
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -29,12 +28,13 @@ function App() {
     //   <RouterProvider router={router} />
     // </>
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/cart" element={<Home/>} />
-        <Route path="*" element={<p>Not Found</p>} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/cart" element={<Home/>} />
+          <Route path="*" element={<p>Not Found</p>} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   );
 }

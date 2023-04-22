@@ -17,9 +17,13 @@ function Header() {
   return (
     <div className="Header">
       <h1>World Store</h1>
-      <button type="button" onClick={handleDarkMode}>
-        {darkMode ? 'DarkMode' : 'LightMode'}
-      </button>
+      <div>
+        <button type="button" onClick={handleDarkMode}>
+          {darkMode ? 'DarkMode' : 'LightMode'}
+        </button>
+        <div className="Header-checkout">Checkout</div>
+
+      </div>
     </div>
   );
 }

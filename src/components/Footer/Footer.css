@@ -1,0 +1,19 @@
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111111;
+  flex-direction: column;
+  color: #FFF;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.Footer .Footer-title {
+  font-size: 3rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+.Footer .Footer-copy{
+  font-size: 0.7rem;
+}
