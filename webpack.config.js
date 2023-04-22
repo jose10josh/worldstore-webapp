@@ -9,7 +9,8 @@ module.exports = {
   mode,
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: "/"
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -56,6 +57,7 @@ module.exports = {
       directory: path.join(__dirname, "dist")
     },
     compress: true,
-    port: 3000
+    port: 3000,
+    historyApiFallback:true
   }
 }

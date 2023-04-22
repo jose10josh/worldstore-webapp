@@ -1,17 +1,41 @@
 import React from 'react';
-import { Header } from './components/Header/Header';
-import { ProductList } from './components/ProductList/ProductList';
-import { SearchBar } from './components/SearchBar/SearchBar';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  // createBrowserRouter,
+  // createRoutesFromElements,
+  // RouterProvider
+} from "react-router-dom";
 
+import { Header } from './components/Header/Header';
+import { Home } from './containers/home';
 import './App.css';
+
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <>
+//       <Route path='/' element={<Home />} />
+//       <Route path='/cart' element={<Home />} />
+//       <Route path='*' element={<p>Not Found</p>} />
+//     </>
+//   )
+// );
 
 function App() {
   return (
-    <div className="App">
+    // <>
+    //   <Header />
+    //   <RouterProvider router={router} />
+    // </>
+    <BrowserRouter>
       <Header />
-      <SearchBar />
-      <ProductList />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/cart" element={<Home/>} />
+        <Route path="*" element={<p>Not Found</p>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
