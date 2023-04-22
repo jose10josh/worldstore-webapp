@@ -2,8 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const mode = "development"
+
 module.exports = {
   entry: './src/index.tsx',
+  mode,
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -49,7 +52,9 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, "dist")
+    },
     compress: true,
     port: 3000
   }

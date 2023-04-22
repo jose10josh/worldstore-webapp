@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import { useAppDispatch } from '../../app/hooks';
 import { setSearched } from '../../slices/productSlice';

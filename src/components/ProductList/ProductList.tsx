@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { ProductCard } from '../ProductCard/ProductCard';
@@ -7,7 +8,6 @@ import { useGetProducts } from '../../hooks/useGetProducts';
 
 import './ProductList.css'
 import { useAppDispatch } from '../../app/hooks';
-import { useEffect } from 'react';
 
 const ProductList = () => {
   const dispatch = useAppDispatch()

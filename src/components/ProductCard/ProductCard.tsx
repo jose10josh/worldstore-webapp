@@ -1,3 +1,4 @@
+import React from 'react';
 import { ProductModel } from '../../models/ProductModel';
 
 import './ProductCard.css';
