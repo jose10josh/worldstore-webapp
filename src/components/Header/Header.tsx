@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
 
 import { useAppDispatch } from '../../app/hooks';
@@ -17,11 +18,13 @@ function Header() {
   return (
     <div className="Header">
       <h1>World Store</h1>
-      <div>
+      <div className='Header-menu'>
         <button type="button" onClick={handleDarkMode}>
           {darkMode ? 'DarkMode' : 'LightMode'}
         </button>
-        <div className="Header-checkout">Checkout</div>
+        <Link to="/">Inicio</Link>
+        <Link to="/cart">Carrito</Link>
+        <Link to="/checkout">Checkout</Link>
 
       </div>
     </div>

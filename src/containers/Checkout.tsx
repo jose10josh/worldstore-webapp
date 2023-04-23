@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles/Checkout.css';
 
 const Checkout = () => {
@@ -33,7 +34,9 @@ const Checkout = () => {
         </div>
 
         <h3>Precio Total: $10</h3>
-        <button type="button">Continuar pedido</button>
+        <Link to="/checkout/payment">
+          <button type="button">Continuar pedido</button>
+        </Link>
       </div>
     </section>
   );

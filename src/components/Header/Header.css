@@ -1,21 +1,24 @@
 .Header {
   display: flex;
   justify-content: space-between;
+  padding: 0 2.5rem;
+  box-shadow: 0 0 10px 0px #c4c4c4;
 }
-.Header-checkout {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  justify-items: center;
-  width: 30px;
-  margin: 0 0 0 0.5em;
-}
-.Header-alert {
-  color: #33b13a;
-  font-size: 14px;
-  margin-left: 5px;
-}
+
 .Header a {
   text-decoration: none;
-  color: #33b1ff;
+  color: #000;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+.Header a:hover {
+  color: #33b13a;
+}
+.Header-menu {
+  display: flex;
+  align-items: center;
+}
+.Header-menu button {
+  margin-right: 1rem;
 }
