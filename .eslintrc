@@ -51,7 +51,8 @@
     "Blob": true,
     "navigator": true,
     "JSX": true,
-    "HTMLInputElement": true
+    "HTMLInputElement": true,
+    "HTMLButtonElement": true
   },
   "overrides": [
     {
