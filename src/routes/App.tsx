@@ -8,8 +8,9 @@ import {
   // RouterProvider
 } from "react-router-dom";
 
-import { Home } from './containers/home';
-import { Layout } from './components/Layout/Layout';
+import { Home } from '../containers/Home';
+import { Layout } from '../components/Layout/Layout';
+import { Checkout } from '../containers/Checkout';
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -31,6 +32,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/checkout" element={<Checkout/>} />
           <Route path="/cart" element={<Home/>} />
           <Route path="*" element={<p>Not Found</p>} />
         </Routes>
