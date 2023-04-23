@@ -11,6 +11,7 @@ import {
 import { Home } from '../containers/Home';
 import { Layout } from '../components/Layout/Layout';
 import { Checkout } from '../containers/Checkout';
+import { Cart } from '../containers/Cart';
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -32,8 +33,8 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/cart" element={<Cart/>} />
           <Route path="/checkout" element={<Checkout/>} />
-          <Route path="/cart" element={<Home/>} />
           <Route path="*" element={<p>Not Found</p>} />
         </Routes>
       </Layout>
