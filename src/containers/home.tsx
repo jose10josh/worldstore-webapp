@@ -7,12 +7,14 @@ import { useAppDispatch } from '../app/hooks';
 import { useGetProducts } from '../hooks/useGetProducts';
 import { selectFilterProducts, setProducts } from '../slices/productSlice';
 import { API } from '../utils/API';
+import { selectLoading } from '../slices/uiSlice';
 
 function Home() {
   const dispatch = useAppDispatch();
-  const { loading, error, prodList } = useGetProducts(`${API}/products`);
+  const { error, prodList } = useGetProducts(`${API}/products`);
 
   const productList = useSelector(selectFilterProducts);
+  const loading = useSelector(selectLoading);
 
   useEffect(() => {
     dispatch(setProducts(prodList));

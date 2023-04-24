@@ -25,6 +25,6 @@ export const uiSlice = createSlice({
 });
 
 export const { setLoading, setDarkMode } = uiSlice.actions;
-export const selectLoading = (state: RootState) => state.ui.loading;
-export const selectIsDarkMode = (state: RootState) => state.ui.isDarkMode;
+export const selectLoading = (state: RootState):boolean => state.ui.loading;
+export const selectIsDarkMode = (state: RootState):boolean => state.ui.isDarkMode;
 export default uiSlice.reducer;

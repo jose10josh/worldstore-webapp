@@ -7,6 +7,16 @@
     "prettier"
   ],
   "rules": {
+    "jsx-a11y/label-has-associated-control": ["error", {
+      "required": {
+        "some": ["nesting", "id"]
+      }
+    }],
+    "jsx-a11y/label-has-for": ["error", {
+      "required": {
+        "some": ["nesting", "id"]
+      }
+    }],
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "import/extensions": [
       "error",
@@ -74,35 +84,3 @@
     }
   }
 }
-// {
-//   "parser": "@typescript-eslint/parser",
-//   "plugins": ["react", "react-hooks", "jsx-a11y", "import"],
-//   "extends": [
-//     "eslint:recommended",
-//     "plugin:react/recommended",
-//     "plugin:react-hooks/recommended",
-//     "plugin:jsx-a11y/recommended",
-//     "plugin:import/errors",
-//     "plugin:import/warnings",
-//     "plugin:import/typescript"
-//   ],
-//   "rules": {
-//     "react/prop-types": "off",
-//     "import/no-unresolved": "off",
-//     "import/extensions": [
-//       "error",
-//       "ignorePackages",
-//       {
-//         "js": "never",
-//         "jsx": "never",
-//         "ts": "never",
-//         "tsx": "never"
-//       }
-//     ]
-//   },
-//   "settings": {
-//     "react": {
-//       "version": "detect"
-//     }
-//   }
-// }

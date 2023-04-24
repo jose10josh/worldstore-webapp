@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
-import { BiBed } from "react-icons/bi";
+import { BiCart } from "react-icons/bi";
 
 import { useAppDispatch } from '../../app/hooks';
 import { selectIsDarkMode, setDarkMode } from '../../slices/uiSlice';
@@ -24,7 +24,7 @@ function Header() {
           {darkMode ? 'DarkMode' : 'LightMode'}
         </button>
         <Link to="/">Inicio</Link>
-        <Link to="/cart"><BiBed size="1.5rem" /></Link>
+        <Link to="/cart"><BiCart size="1.5rem" /></Link>
         <Link to="/checkout">Checkout</Link>
 
       </div>

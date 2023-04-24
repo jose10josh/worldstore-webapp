@@ -13,6 +13,7 @@ import { Layout } from '../components/Layout/Layout';
 import { Checkout } from '../containers/Checkout';
 import { Cart } from '../containers/Cart';
 import { Payment } from '../containers/Payment';
+import { ProductDetail } from '../containers/ProductDetail';
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -34,6 +35,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/product/:id" element={<ProductDetail/>} />
           <Route path="/cart" element={<Cart/>} />
           <Route path="/checkout" element={<Checkout/>} />
           <Route path="/checkout/payment" element={<Payment/>} />

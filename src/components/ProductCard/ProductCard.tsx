@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ProductModel } from '../../models/ProductModel';
 import { useAppDispatch } from '../../app/hooks';
 import { setFavorite } from '../../slices/productSlice';
@@ -16,16 +17,8 @@ const ProductCard = ({ product }: Props) => {
     dispatch(setFavorite(item));
   };
 
-  // function splitText(text:string) {
-  //   const maxLength = 100;
-  //   if (text.length <= maxLength) {
-  //     return [text];
-  //   }
-  //   return `${text.slice(0, maxLength - 10)}...`;
-  // }
-
   return (
-    <a href={`/product?id=${product.id}`} className="Products-item">
+    <Link to={`/product/${product.id}`} className="Products-item">
       <figure>
         <button className='favorite' type="button" onClick={(event) => handleSetFavorite(product, event)}>
           {product.favorite ? 'Favorite' : 'NOTFAV'}
@@ -40,7 +33,7 @@ const ProductCard = ({ product }: Props) => {
         <h2>{product.title}</h2>
         <p>Add to Cart</p>
       </div>
-    </a>
+    </Link>
   );
 }
 
